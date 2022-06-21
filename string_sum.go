@@ -2,6 +2,7 @@ package string_sum
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -28,12 +29,12 @@ func StringSum(input string) (output string, err error) {
 
 	input = strings.TrimSpace(input)
 	if len([]rune(input)) == 0 {
-		return "", errorEmptyInput
+		return "", fmt.Errorf("error: %v", errorEmptyInput)
 	}
 
 	strOperands := strings.Split(input, "+")
 	if len(strOperands) != 2 {
-		return "", errorNotTwoOperands
+		return "", fmt.Errorf("error: %v", errorNotTwoOperands)
 	}
 
 	var operands [2]int
