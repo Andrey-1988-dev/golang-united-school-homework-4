@@ -33,7 +33,7 @@ func StringSum(input string) (output string, err error) {
 		return "", fmt.Errorf("inpute errore: %w", errorEmptyInput)
 	}
 
-	// Колличество слогаемых
+	// Количество слагаемых
 	const amountNumber = 2
 
 	// Массив слагаемых в виде string
@@ -42,7 +42,7 @@ func StringSum(input string) (output string, err error) {
 	// Порядковый номер слагаемого
 	addendum := 0
 
-	// Перебираем руны и  заполняем numbers
+	// Перебираем руны и заполняем numbers
 	for _, itemRune := range input {
 		itemString := string(itemRune)
 		if itemString == "+" || itemString == "-" {
