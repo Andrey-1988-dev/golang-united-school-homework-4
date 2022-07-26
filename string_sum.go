@@ -74,7 +74,7 @@ func StringSum(input string) (output string, err error) {
 		return "", fmt.Errorf("minimum numbers errore: %w", errorNotTwoOperands)
 	}
 
-	// сумма всех слогаемых
+	// сумма всех слагаемых
 	var sum int
 	for _, number := range numbers {
 		intNumber, err := strconv.Atoi(number)
